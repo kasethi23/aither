@@ -304,7 +304,7 @@ export default function Home() {
             <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04]">
               <Command className="h-5 w-5 text-tealglow" />
             </span>
-            <span className="text-sm font-semibold tracking-[0.28em] text-white">AGENTWATCH</span>
+            <span className="text-sm font-semibold tracking-[0.28em] text-white">AITHER</span>
           </a>
           <div className="hidden items-center gap-8 lg:flex">
             {navItems.map((item) => (
@@ -331,7 +331,7 @@ export default function Home() {
             </p>
             <p className="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">
               AI agents create dynamic execution paths across models, tools, APIs, and data. Traditional
-              observability tools cannot explain these behaviors. AGENTWATCH integrates with OpenClaw and
+              observability tools cannot explain these behaviors. Aither integrates with OpenClaw and
               other agent runtimes to visualize and model how agents actually operate.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -465,7 +465,7 @@ export default function Home() {
             <SectionHeader
               eyebrow="OpenClaw Integration"
               title="Built for OpenClaw agents"
-              copy="OpenClaw provides powerful autonomous agents capable of reasoning, tool use, and multi-agent coordination. AGENTWATCH acts as the control plane above those systems, capturing reasoning steps, tool execution, and runtime interactions."
+              copy="OpenClaw provides powerful autonomous agents capable of reasoning, tool use, and multi-agent coordination. Aither acts as the control plane above those systems, capturing reasoning steps, tool execution, and runtime interactions."
             />
             <div className="mt-8 space-y-4">
               {[
@@ -646,7 +646,7 @@ export default function Home() {
               <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04]">
                 <Sparkles className="h-5 w-5 text-tealglow" />
               </span>
-              <span className="text-sm font-semibold tracking-[0.28em] text-white">AGENTWATCH</span>
+              <span className="text-sm font-semibold tracking-[0.28em] text-white">AITHER</span>
             </div>
             <p className="mt-4 text-sm leading-7 text-muted">
               Runtime control plane and observability for OpenClaw and modern AI agent systems.
@@ -668,7 +668,7 @@ export default function Home() {
           </div>
         </div>
         <div className="container-shell mt-10 border-t border-white/10 pt-6 text-sm text-muted">
-          Copyright 2026 AGENTWATCH. All rights reserved.
+          Copyright 2026 Aither. All rights reserved.
         </div>
       </footer>
     </main>
