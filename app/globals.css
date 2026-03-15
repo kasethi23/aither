@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(79, 107, 255, 0.16), transparent 26%),
+    radial-gradient(circle at top right, rgba(45, 212, 191, 0.1), transparent 22%),
+    linear-gradient(180deg, #05060a 0%, #070910 42%, #05060a 100%);
+  color: #e8ecf8;
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-7xl px-6 lg:px-8;
+}
+
+.section-space {
+  @apply py-20 sm:py-24 lg:py-28;
+}
+
+.panel {
+  @apply rounded-3xl border border-white/10 bg-panel/80 shadow-panel backdrop-blur-sm;
+}
+
+.panel-hover {
+  @apply transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.04];
+}
+
+.eyebrow {
+  @apply mb-4 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-muted;
+}
+
+.section-title {
+  @apply text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl;
+}
+
+.section-copy {
+  @apply mt-5 max-w-3xl text-base leading-7 text-muted sm:text-lg;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-full border border-blueglow/60 bg-blueglow px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#6078ff];
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-white/[0.12] bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.08];
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.graph-node {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(7, 9, 16, 0.86);
+  padding: 0.8rem 1rem;
+  color: #f4f7ff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.graph-node-blue {
+  box-shadow: 0 0 0 1px rgba(79, 107, 255, 0.24), 0 0 32px rgba(79, 107, 255, 0.22);
+}
+
+.graph-node-violet {
+  box-shadow: 0 0 0 1px rgba(109, 94, 248, 0.24), 0 0 32px rgba(109, 94, 248, 0.22);
+}
+
+.graph-node-green {
+  box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.24), 0 0 32px rgba(45, 212, 191, 0.2);
+}
+
+.graph-node-red {
+  box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.24), 0 0 32px rgba(248, 113, 113, 0.18);
+}
+
+.status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #2dd4bf;
+  box-shadow: 0 0 12px rgba(45, 212, 191, 0.9);
+  animation: pulse-dot 2.2s ease-in-out infinite;
+}
+
+.signal-pill {
+  display: inline-flex;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 999px;
+}
+
+.signal-pill-blue {
+  background: #4f6bff;
+  box-shadow: 0 0 12px rgba(79, 107, 255, 0.8);
+}
+
+.signal-pill-violet {
+  background: #6d5ef8;
+  box-shadow: 0 0 12px rgba(109, 94, 248, 0.8);
+}
+
+.signal-pill-green {
+  background: #2dd4bf;
+  box-shadow: 0 0 12px rgba(45, 212, 191, 0.8);
+}
+
+.signal-pill-red {
+  background: #f87171;
+  box-shadow: 0 0 12px rgba(248, 113, 113, 0.8);
+}
+
+.graph-signal {
+  animation: edge-pulse 2.8s linear infinite;
+  transform-origin: left center;
+}
+
+.delay-150 {
+  animation-delay: 150ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}
+
+@keyframes edge-pulse {
+  0% {
+    opacity: 0.18;
+    transform: scaleX(0.92);
+  }
+
+  50% {
+    opacity: 0.95;
+    transform: scaleX(1);
+  }
+
+  100% {
+    opacity: 0.2;
+    transform: scaleX(0.92);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(0.92);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
